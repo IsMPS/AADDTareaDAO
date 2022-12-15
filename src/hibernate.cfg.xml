@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">usuario</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/concesionario_iris?serverTimezone=UTC</property>
+        <property name="hibernate.connection.username">usuario_hibernate</property>
+        <property name="hibernate.default_schema">concesionario_iris</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
+
+        
+        <mapping class="main.model.User"/>
+        <mapping class="main.model.Vehiculo"/>
+        <mapping class="main.model.Cliente"/>
+        <mapping class="main.model.Propuesta"/>
+        <mapping class="main.model.Concesionario"/>
+        <mapping class="main.model.Reparacion"/>
+        <mapping class="main.model.Venta"/>
+        
+        
+    </session-factory>
+</hibernate-configuration>
