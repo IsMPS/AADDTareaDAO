@@ -11,13 +11,12 @@
         <property name="hibernate.default_schema">concesionario_iris</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="hibernate.show_sql">true</property>
-        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
 
         
-        <mapping class="main.model.User"/>
+        <mapping class="main.model.Empleado"/>
         <mapping class="main.model.Vehiculo"/>
         <mapping class="main.model.Cliente"/>
-        <mapping class="main.model.Propuesta"/>
         <mapping class="main.model.Concesionario"/>
         <mapping class="main.model.Reparacion"/>
         <mapping class="main.model.Venta"/>

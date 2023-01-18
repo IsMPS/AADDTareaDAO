@@ -42,7 +42,7 @@ public class Reparacion {
 	
 	@OneToOne
 	@PrimaryKeyJoinColumn
-	private User empleado;
+	private Empleado empleado;
 	
 	@OneToOne
 	@PrimaryKeyJoinColumn
@@ -116,11 +116,11 @@ public class Reparacion {
 		this.fecha_Finalizacion = fecha_Finalizacion;
 	}
 
-	public User getEmpleado() {
+	public Empleado getEmpleado() {
 		return empleado;
 	}
 
-	public void setEmpleado(User empleado) {
+	public void setEmpleado(Empleado empleado) {
 		this.empleado = empleado;
 	}
 

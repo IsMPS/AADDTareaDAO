@@ -1,5 +1,7 @@
 package main.model;
 
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,7 +19,7 @@ public class Venta {
 	
 	@OneToOne
 	@PrimaryKeyJoinColumn
-	private User empleado;
+	private Empleado empleado;
 	
 	@OneToOne
 	@PrimaryKeyJoinColumn
@@ -29,12 +31,19 @@ public class Venta {
 	
 	@Column
 	private double precio;
+	
+	// Comprobar en la app que es más tarde que la fecha actual.
+		@Column
+		private Date fecha_Validez;
+		
+		@Column
+		private boolean propuesta;
 
-	public User getEmpleado() {
+	public Empleado getEmpleado() {
 		return empleado;
 	}
 
-	public void setEmpleado(User empleado) {
+	public void setEmpleado(Empleado empleado) {
 		this.empleado = empleado;
 	}
 
@@ -69,6 +78,23 @@ public class Venta {
 	public Venta() {
 		super();
 	}
+	
+	public Date getFecha_Validez() {
+		return fecha_Validez;
+	}
+
+	public void setFecha_Validez(Date fecha_Validez) {
+		this.fecha_Validez = fecha_Validez;
+	}
+
+	public boolean isPropuesta() {
+		return propuesta;
+	}
+
+	public void setPropuesta(boolean propuesta) {
+		this.propuesta = propuesta;
+	}
+	
 	
 	
 	

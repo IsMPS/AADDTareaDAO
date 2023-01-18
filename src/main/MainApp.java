@@ -6,7 +6,7 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
-import main.model.User;
+import main.model.Empleado;
 
 public class MainApp {
 
@@ -23,7 +23,7 @@ public class MainApp {
 
 		
 		
-		User usuarioPrueba = new User();
+		Empleado usuarioPrueba = new Empleado();
 		
 		usuarioPrueba.setUsername("U");
 		usuarioPrueba.setPassword("U");

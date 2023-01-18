@@ -14,7 +14,8 @@ import main.utils.TipoUsers;
 import main.utils.TipoVehiculos;
 
 @Entity
-public class User {
+
+public class Empleado {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -65,11 +66,11 @@ public class User {
 	
 	// Tipo especializacion para user mecanico
 	
-	public User() {
+	public Empleado() {
 		super();
 	}
 
-	public User(String username, String password) {
+	public Empleado(String username, String password) {
 		super();
 		this.username = username;
 		this.password = password;
