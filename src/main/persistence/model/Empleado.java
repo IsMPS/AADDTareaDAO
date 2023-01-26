@@ -1,4 +1,4 @@
-package main.model;
+package main.persistence.model;
 
 import java.util.Date;
 
@@ -14,12 +14,11 @@ import main.utils.TipoUsers;
 import main.utils.TipoVehiculos;
 
 @Entity
-
 public class Empleado {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_User;
+	private int id_Empleado;
 	
 	@Column
 	private String username;
@@ -90,7 +89,7 @@ public class Empleado {
 	}
 
 	public int getId() {
-		return id_User;
+		return id_Empleado;
 	}
 
 	public TipoUsers getPuesto() {

@@ -9,17 +9,17 @@
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/concesionario_iris?serverTimezone=UTC</property>
         <property name="hibernate.connection.username">usuario_hibernate</property>
         <property name="hibernate.default_schema">concesionario_iris</property>
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
         <property name="hibernate.show_sql">true</property>
-        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
 
         
-        <mapping class="main.model.Empleado"/>
-        <mapping class="main.model.Vehiculo"/>
-        <mapping class="main.model.Cliente"/>
-        <mapping class="main.model.Concesionario"/>
-        <mapping class="main.model.Reparacion"/>
-        <mapping class="main.model.Venta"/>
+        <mapping class="main.persistence.model.Empleado"/>
+        <mapping class="main.persistence.model.Vehiculo"/>
+        <mapping class="main.persistence.model.Cliente"/>
+        <mapping class="main.persistence.model.Concesionario"/>
+        <mapping class="main.persistence.model.Reparacion"/>
+        <mapping class="main.persistence.model.Venta"/>
         
         
     </session-factory>
